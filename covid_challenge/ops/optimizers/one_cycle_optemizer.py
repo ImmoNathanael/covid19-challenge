@@ -75,10 +75,10 @@ class OneCycleOpt():
                                                              div_factor=self.div_factor,
                                                              final_div_factor=self.final_div_factor)
 
-    # future:... add grad_params methode
+        self.param_groups = self.optimizer.param_groups
 
     def zero_grad(self):
-        self.optimizers.zero_grad()
+        self.optimizer.zero_grad()
 
     def step(self):
         self.optimizer.step()
